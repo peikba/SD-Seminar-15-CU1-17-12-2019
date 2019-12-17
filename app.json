@@ -1,0 +1,38 @@
+{
+  "id": "778f4e9f-565e-43e0-8a3b-286953495d85",
+  "name": "SD Seminar 15 CU1",
+  "publisher": "Default publisher",
+  "version": "15.0.0.0",
+  "brief": "SD Seminar",
+  "description": "SD Seminar - Buy my awesome app !!!!",
+  "privacyStatement": "",
+  "EULA": "Http://ba-consult.dk/downloads/warrenty.txt",
+  "help": "",
+  "url": "http://b-a.dk",
+  "logo": "./Images/Seminar_Logo.jpg",
+  "dependencies": [
+    {
+      "appId": "63ca2fa4-4f03-4f2b-a480-172fef340d3f",
+      "publisher": "Microsoft",
+      "name": "System Application",
+      "version": "1.0.0.0"
+    },
+    {
+      "appId": "437dbf0e-84ff-417a-965d-ed2bb9650972",
+      "publisher": "Microsoft",
+      "name": "Base Application",
+      "version": "15.0.0.0"
+    }
+  ],
+  "screenshots": [],
+  "platform": "15.0.0.0",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 50149
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://SDSeminar15CU1.com/help/",
+  "showMyCode": true,
+  "runtime": "4.0"
+}
