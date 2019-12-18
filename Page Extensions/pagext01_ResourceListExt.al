@@ -7,7 +7,6 @@ pageextension 50101 "CSD ResourceListExt" extends "Resource List"
 // - Maximum Participants
 // Added code to OnOpenPage trigger
 
-
 {
     layout
     {
