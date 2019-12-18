@@ -15,6 +15,7 @@ page 50100 "CSD Seminar Setup"
         {
             group(GroupName)
             {
+                Caption = 'Numbering';
                 field("Seminar Nos."; "Seminar Nos.")
                 {
                     ApplicationArea = All;
