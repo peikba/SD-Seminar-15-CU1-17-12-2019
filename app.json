@@ -10,6 +10,7 @@
   "help": "",
   "url": "http://b-a.dk",
   "logo": "./Images/Seminar_Logo.jpg",
+  "features": ["TranslationFile"],
   "dependencies": [
     {
       "appId": "63ca2fa4-4f03-4f2b-a480-172fef340d3f",
