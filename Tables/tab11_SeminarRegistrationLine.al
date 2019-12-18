@@ -1,34 +1,34 @@
 table 50111 "CSD Seminar Registration Line"
-// CSD1.00 - 2018-01-01 - D. E. Veloper
-//   Chapter 6 - Lab 1-5
-//     - Created new table
 {
+    // CSD1.00 - 2018-01-01 - D. E. Veloper
+    //   Chapter 6 - Lab 1-5
+    //     - Created new table
     Caption = 'Seminar Registration Line';
 
     fields
     {
         field(1; "Document No."; Code[20])
         {
-            caption = 'Document No.';
+            Caption = 'Document No.';
             TableRelation = "CSD Seminar Reg. Header";
             DataClassification = AccountData;
         }
         field(2; "Line No."; Integer)
         {
-            caption = 'Line No.';
+            Caption = 'Line No.';
             DataClassification = AccountData;
         }
         field(3; "Bill-to Customer No."; Code[20])
         {
-            Caption = 'Bill-to Customer No.';
             TableRelation = Customer;
+            Caption = 'Bill-to Customer No.';
             DataClassification = AccountData;
 
             trigger OnValidate();
             begin
                 if "Bill-to Customer No." <> xRec."Bill-to Customer No." then begin
                     if Registered then begin
-                        Error(RegisteredErrorTxt,
+                        ERROR(RegisteredErrorTxt,
                           FieldCaption("Bill-to Customer No."),
                           FieldCaption(Registered),
                           Registered);
@@ -38,8 +38,8 @@ table 50111 "CSD Seminar Registration Line"
         }
         field(4; "Participant Contact No."; Code[20])
         {
-            Caption = 'Participant Contact No.';
             TableRelation = Contact;
+            Caption = 'Participant Contact No.';
             DataClassification = AccountData;
 
             trigger OnLookup();
@@ -47,7 +47,7 @@ table 50111 "CSD Seminar Registration Line"
                 ContactBusinessRelation.Reset();
                 ContactBusinessRelation.SetRange("Link to Table", ContactBusinessRelation."Link to Table"::Customer);
                 ContactBusinessRelation.SetRange("No.", "Bill-to Customer No.");
-                if ContactBusinessRelation.FindFirst() then begin
+                if ContactBusinessRelation.FindFirst then begin
                     Contact.SetRange("Company No.", ContactBusinessRelation."Contact No.");
                     if page.RunModal(page::"Contact List", Contact) = "Action"::LookupOK then
                         "Participant Contact No." := Contact."No.";
@@ -66,7 +66,7 @@ table 50111 "CSD Seminar Registration Line"
                     ContactBusinessRelation.SetCurrentKey("Link to Table", "No.");
                     ContactBusinessRelation.SetRange("Link to Table", ContactBusinessRelation."Link to Table"::Customer);
                     ContactBusinessRelation.SetRange("No.", "Bill-to Customer No.");
-                    if ContactBusinessRelation.FindFirst() then begin
+                    if ContactBusinessRelation.FindFirst then begin
                         if ContactBusinessRelation."Contact No." <> Contact."Company No." then begin
                             ERROR(WrongContactErrorTxt, Contact."No.", Contact.Name, "Bill-to Customer No.");
                         end;
@@ -131,7 +131,7 @@ table 50111 "CSD Seminar Registration Line"
                     GLSetup.Get();
                     "Line Discount Amount" := Round("Line Discount %" * "Seminar Price" * 0.01, GLSetup."Amount Rounding Precision");
                 end;
-                UpdateAmount();
+                UpdateAmount;
             end;
         }
         field(12; "Line Discount Amount"; Decimal)
@@ -148,7 +148,7 @@ table 50111 "CSD Seminar Registration Line"
                     GLSetup.Get();
                     "Line Discount %" := Round("Line Discount Amount" / "Seminar Price" * 100, GLSetup."Amount Rounding Precision");
                 end;
-                UpdateAmount();
+                UpdateAmount;
             end;
         }
         field(13; Amount; Decimal)
@@ -193,8 +193,8 @@ table 50111 "CSD Seminar Registration Line"
 
     trigger OnInsert();
     begin
-        GetSeminarRegHeader();
-        "Registration Date" := WorkDate();
+        GetSeminarRegHeader;
+        "Registration Date" := WorkDate;
         "Seminar Price" := SeminarRegHeader."Seminar Price";
         Amount := SeminarRegHeader."Seminar Price";
     end;

@@ -9,7 +9,7 @@ page 50113 "CSD Seminar Registration List"
     Editable = false;
     PageType = List;
     SourceTable = "CSD Seminar Reg. Header";
-    UsageCategory=lists;
+    UsageCategory = lists;
 
     layout
     {
@@ -17,49 +17,49 @@ page 50113 "CSD Seminar Registration List"
         {
             repeater(Group)
             {
-                field("No.";"No.")
+                field("No."; "No.")
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
-                field("Starting Date";"Starting Date")
+                field("Starting Date"; "Starting Date")
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
-                field("Seminar No.";"Seminar No.")
+                field("Seminar No."; "Seminar No.")
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
-                field("Seminar Name";"Seminar Name")
+                field("Seminar Name"; "Seminar Name")
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
-                field(Status;Status)
+                field(Status; Status)
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
-                field(Duration;Duration)
+                field(Duration; Duration)
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
-                field("Maximum Participants";"Maximum Participants")
+                field("Maximum Participants"; "Maximum Participants")
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
-                field("Room Code";"Room Code")
+                field("Room Resource No."; "Room Resource No.")
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
             }
         }
         area(factboxes)
         {
-            systempart("Links";Links)
+            systempart("Links"; Links)
             {
-                ApplicationArea=All;
+                ApplicationArea = All;
             }
-            systempart("Notes";Notes)
+            systempart("Notes"; Notes)
             {
-                ApplicationArea=All;
+                ApplicationArea = All;
             }
         }
     }
@@ -76,17 +76,17 @@ page 50113 "CSD Seminar Registration List"
                     Caption = 'Co&mments';
                     Image = Comment;
                     RunObject = Page 50106;
-                    RunPageLink = "No."=Field("No.");
-                    RunPageView = where("Table Name"=Const("Seminar Registration"));
-                    ApplicationArea=All;
+                    RunPageLink = "No." = Field ("No.");
+                    RunPageView = where ("Table Name" = Const ("Seminar Registration"));
+                    ApplicationArea = All;
                 }
                 action("&Charges")
                 {
                     Caption = '&Charges';
                     Image = Costs;
                     RunObject = Page 50124;
-                    RunPageLink = "Document No."=Field("No.");
-                    ApplicationArea=All;
+                    RunPageLink = "Document No." = Field ("No.");
+                    ApplicationArea = All;
                 }
             }
         }

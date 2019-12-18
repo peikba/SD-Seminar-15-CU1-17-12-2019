@@ -15,41 +15,41 @@ page 50124 "CSD Seminar Charges"
         {
             repeater(Group)
             {
-                field("No.";"No.")
+                field("No."; "No.")
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
-                field(Description;Description)
+                field(Description; Description)
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
-                field(Quantity;Quantity)
+                field(Quantity; Quantity)
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
-                field("Unit of Measure Code";"Unit of Measure Code")
+                field("Unit of Measure Code"; "Unit of Measure Code")
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
-                field("Bill-to Customer No.";"Bill-to Customer No.")
+                field("Bill-to Customer No."; "Bill-to Customer No.")
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
-                field("Gen. Prod. Posting Group";"Gen. Prod. Posting Group")
+                field("Gen. Prod. Posting Group"; "Gen. Prod. Posting Group")
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
-                field("Unit Price";"Unit Price")
+                field("Unit Price"; "Unit Price")
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
-                field("Total Price";"Total Price")
+                field("Total Price"; "Total Price")
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
-                field("To Invoice";"To Invoice")
+                field("To Invoice"; "To Invoice")
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
             }
         }

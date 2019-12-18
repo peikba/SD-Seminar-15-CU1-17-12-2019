@@ -6,8 +6,9 @@ page 50111 "CSD Seminar Reg. Subpage"
 
     Caption = 'Lines';
     DelayedInsert = true;
-    PageType = List;
+    PageType = ListPart;
     SourceTable = "CSD Seminar Registration Line";
+    AutoSplitKey = true;
 
     layout
     {
@@ -15,53 +16,53 @@ page 50111 "CSD Seminar Reg. Subpage"
         {
             repeater(Group)
             {
-                field("Bill-to Customer No.";"Bill-to Customer No.")
+                field("Bill-to Customer No."; "Bill-to Customer No.")
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
-                field("Participant Contact No.";"Participant Contact No.")
+                field("Participant Contact No."; "Participant Contact No.")
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
-                field("Participant Name";"Participant Name")
+                field("Participant Name"; "Participant Name")
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
-                field(Participated;Participated)
+                field(Participated; Participated)
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
-                field("Registration Date";"Registration Date")
+                field("Registration Date"; "Registration Date")
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
-                field("Confirmation Date";"Confirmation Date")
+                field("Confirmation Date"; "Confirmation Date")
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
-                field("To Invoice";"To Invoice")
+                field("To Invoice"; "To Invoice")
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
-                field(Registered;Registered)
+                field(Registered; Registered)
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
-                field("Seminar Price";"Seminar Price")
+                field("Seminar Price"; "Seminar Price")
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
-                field("Line Discount %";"Line Discount %")
+                field("Line Discount %"; "Line Discount %")
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
-                field("Line Discount Amount";"Line Discount Amount")
+                field("Line Discount Amount"; "Line Discount Amount")
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
-                field(Amount;Amount)
+                field(Amount; Amount)
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
             }
         }
